@@ -1,0 +1,96 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+body {
+	background: #eee;
+}
+
+/*container容器样式*/
+.container {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	overflow: hidden; 
+}
+
+/*pics*/
+.pics {
+	position: absolute;
+	top: 0;
+	left: -600px;
+	width: 4200px;
+	height: 400px;
+	font-size: 0;
+}
+.pics > img {
+	width: 600px;
+	height: 400px;
+}
+
+/*buttons*/
+.buttons {
+	position: absolute;
+	bottom: 20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 110px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+	font-size: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: rgba(155,155,155,.3);
+	transition: opacity .3s ease-in;
+	opacity: 0;
+}
+.container:hover .buttons,
+.container:hover .arrow {
+	opacity: .8;
+}
+.buttons > span {
+	display: block;
+	float: left;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+	margin: 5px;
+}
+.buttons > span:hover {
+	cursor: pointer;
+}
+.buttons > span.on {
+	background: orange;
+}
+
+/*arrow*/
+.arrow {
+	position: absolute;
+	top: 200px;
+	margin-top: -25px;
+	width: 600px;
+	height: 50px;
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
+.arrow > a {
+	display: block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	color: #eee;
+}
+.arrow > a:first-child {
+	float: left;
+}
+.arrow > a:last-child {
+	float: right;
+}
